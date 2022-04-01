@@ -1,1 +1,60 @@
+Breakpoint 1 at 0x918: file p5original.c, line 33.
+(gdb) r
+Starting program: /home/runner/Test2Session1-2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
 
+Breakpoint 1, main () at p5original.c:33
+33  {
+(gdb) n
+35    n=input_array_size();
+(gdb) s
+input_array_size () at p5original.c:4
+4   {
+(gdb) n
+6     printf("enter the array size:\n");
+(gdb) 5
+Undefined command: "5".  Try "help".
+(gdb) n
+enter the array size:
+7     scanf("%d",&n);
+(gdb) s
+__isoc99_scanf (format=0x561f97e00a3a "%d")
+    at isoc99_scanf.c:27
+27  isoc99_scanf.c: No such file or directory.
+(gdb) n
+32  in isoc99_scanf.c
+(gdb) n
+36  in isoc99_scanf.c
+(gdb) n
+34  in isoc99_scanf.c
+(gdb) n
+37  in isoc99_scanf.c
+(gdb) n
+36  in isoc99_scanf.c
+(gdb) n
+37  in isoc99_scanf.c
+(gdb) n
+n
+32  in isoc99_scanf.c
+(gdb) n
+37  in isoc99_scanf.c
+(gdb) n
+32  in isoc99_scanf.c
+(gdb) n
+44  in isoc99_scanf.c
+(gdb) n
+input_array_size () at p5original.c:8
+8     return n;
+(gdb) n
+9   }
+(gdb) n
+main () at p5original.c:36
+36    int a[100]={0};
+(gdb) n
+37    erotosthenes_sieve(n,a);
+(gdb) n
+38    output(n,a);
+(gdb) n
+39    return 0;
+(gdb) n
+40  }(gdb) n

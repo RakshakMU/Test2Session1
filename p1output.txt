@@ -1,1 +1,39 @@
-
+Breakpoint 1, main () at p1original.c:22
+22  {
+(gdb) n
+24    input(&x1,&x2,&y1,&y2);
+(gdb) s
+input (x1=0x7ffc17a04cf4, y1=0x7ffc17a04cf8, 
+    x2=0x7ffc17a04cfc, y2=0x7ffc17a04d00) at p1original.c:5
+5     printf("enter the coordinates:\n");
+(gdb) n
+enter the coordinates:
+6     scanf("%f%f",x1,y1);
+(gdb) n
+3
+4
+7     printf("enter the coordinates:\n");
+(gdb) n
+enter the coordinates:
+8     scanf("%f%f",x2,y2);
+(gdb) n
+4
+5
+10  }
+(gdb) n
+main () at p1original.c:25
+25    find_distance(x1,x2,y1,y2,&area);
+(gdb) s
+find_distance (x1=3, y1=4, x2=4, y2=5, area=0x7ffc17a04d04)
+    at p1original.c:13
+13    *area=sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+(gdb) n
+15  }
+(gdb) n
+main () at p1original.c:26
+26    output(area);
+(gdb) n
+The distance between the coordinate is 1.414214:
+27    return 0;
+(gdb) n
+28  }(gdb) 

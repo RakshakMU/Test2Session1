@@ -1,1 +1,45 @@
-
+Breakpoint 1, main () at p3original.c:37
+37    a=input_number();
+(gdb) s
+input_number () at p3original.c:3
+3   {
+(gdb) n
+5     printf("enter a number\n");
+(gdb) n
+enter a number
+6     scanf("%d",&x);
+(gdb) n
+5
+7     return x;
+(gdb) n
+8   }
+(gdb) n
+main () at p3original.c:38
+38    b= is_prime(a);
+(gdb) s
+is_prime (n=5) at p3original.c:11
+11    if(n==0||n==1)
+(gdb) n
+13    if(n==2)
+(gdb) n
+15    for(int i=2;i<n/2;i++)
+(gdb) n
+21    return 1;
+(gdb) n
+23  }
+(gdb) n
+main () at p3original.c:39
+39    output(a,b);
+(gdb) s
+output (n=5, is_prime=1) at p3original.c:26
+26    if(is_prime==1)
+(gdb) n
+28      printf("%d is a prime number\n",n);
+(gdb) n
+5 is a prime number
+33  }
+(gdb) n
+main () at p3original.c:40
+40    return 0;
+(gdb) n
+41  }(gdb) 

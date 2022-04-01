@@ -1,1 +1,26 @@
 
+Breakpoint 1, main () at p6original.c:36
+36  {
+(gdb) n
+38    input_string(str);
+(gdb) s
+input_string (a=0x7fff0c33e1f0 "\a\027\200\\\357\177") at p6original.c:4
+4     printf("Enter the string:\n");
+(gdb) n
+Enter the string:
+5     scanf("%s", a);
+(gdb) n
+n
+6   }
+(gdb) n
+main () at p6original.c:40
+40    string_copy(rev_str,str);
+(gdb) 
+41    str_reverse(rev_str);
+(gdb) n
+42    output(str, rev_str);
+(gdb) n
+The reverse of n is n
+43    return 0;
+(gdb) n
+44  }

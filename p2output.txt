@@ -1,1 +1,69 @@
-
+Breakpoint 1, main () at p2original.c:43
+43  {
+(gdb) n
+46      input_line(&x1,&y1,&x2,&y2,&x3,&y3);
+(gdb) s
+input_line (x1=0x7fff151976fc, y1=0x7fff15197700, 
+    x2=0x7fff15197704, y2=0x7fff15197708, x3=0x7fff1519770c, 
+    y3=0x7fff15197710) at p2original.c:5
+5       printf("Enter co-ordinates of point 1\n");
+(gdb) n
+Enter co-ordinates of point 1
+6       scanf("%f %f",x1,y1);
+(gdb) n
+3
+4
+7       printf("Enter co-ordinates of point 2\n");
+(gdb) n
+Enter co-ordinates of point 2
+8       scanf("%f %f",x2,y2);
+(gdb) n
+5
+6
+9       printf("Enter co-ordinates of point 3\n");
+(gdb) n
+Enter co-ordinates of point 3
+10      scanf("%f %f",x3,y3);
+(gdb) n
+5
+6
+11  }
+(gdb) n
+main () at p2original.c:47
+47      istriangle=is_triangle(&x1,&y1,&x2,&y2,&x3,&y3);
+(gdb) s
+is_triangle (x1=0x7fff151976fc, y1=0x7fff15197700, 
+    x2=0x7fff15197704, y2=0x7fff15197708, x3=0x7fff1519770c, 
+    y3=0x7fff15197710) at p2original.c:21
+21      int istriangle=-1;
+(gdb) n
+22      a=find_distance(*x1,*y1,*x2,*y2);
+(gdb) n
+23      b=find_distance(*x2,*y2,*x3,*y3);
+(gdb) n
+24      c=find_distance(*x3,*y3,*x1,*x2);
+(gdb) n
+25      if((a+b)>c&&(b+c)>a&&(c+a)>b)
+(gdb) n
+29      return istriangle;
+(gdb) n
+30  }
+(gdb) n
+main () at p2original.c:48
+48      output( x1,y1,x2,y2,x3,y3,istriangle);
+(gdb) s
+output (x1=3, y1=4, x2=5, y2=6, x3=5, y3=6, istriangle=-1)
+    at p2original.c:33
+33      if(istriangle==1)
+(gdb) n
+37      else if(istriangle==-1)
+(gdb) n
+39          printf("The lines do not form a triangle\n");
+(gdb) n
+The lines do not form a triangle
+41  }
+(gdb) n
+main () at p2original.c:49
+49      return 0;
+(gdb) n
+50  }(gdb) 
